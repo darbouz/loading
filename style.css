@@ -1,0 +1,45 @@
+div.content{
+	position : absolute;
+	top : 50%;
+	left : 50%;
+	transform : translate(-50%,-50%);
+	margin: auto;
+	width: -moz-fit-content;
+	height: 100px;
+}
+.seconde-content{
+	margin: auto;
+	width: 40px;
+}
+.left{
+	height: 20px;
+	width: 20px;
+	background-color: tomato;
+	transform: translateX(100%);
+	animation: leftMove 1.5s infinite linear;
+}
+.right{
+	height: 20px;
+	width: 20px;
+	background-color: #4594c6;
+	animation: rightMove 1.5s infinite linear;
+}
+#loading{
+	font-family: fantasy;
+	font-size: 14px;
+	margin-top: 5px;
+}
+@keyframes rightMove{
+	0%{transform: translate(0%,0%) rotateY(0deg);}
+	25%{transform: translate(100%,0%) rotateY(180deg);background-color: #154d71;}
+	50%{transform: translate(100%,100%) rotateY(180deg);}
+	75%{transform: translate(0%,100%) rotateY(0deg);}
+	100%{transform: translate(0%,0%) rotateY(0deg);}
+}
+@keyframes leftMove{
+	0%{transform: translate(100%,0%) rotateY(0deg);}
+	25%{transform: translate(0%,0%) rotateY(180deg);background-color:#ba3a23;}
+	50%{transform: translate(0%,-100%) rotateY(180deg);}
+	75%{transform: translate(100%,-100%) rotateY(0deg);}
+	100%{transform: translate(100%,0%) rotateY(0deg);}
+}
